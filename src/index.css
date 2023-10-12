@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Slider animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 21));
+  }
+}
+
+/* Slider styles */
+.slider {
+  background: white;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, #ffffff, #ffffff00);
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 70s linear infinite;
+  display: flex;
+  width: calc(250px * 42);
+}
+
+.slider .slide {
+  height: 100px;
+  width: auto;
+}
+
+.slide {
+  display: flex;
+  margin-right: 50px;
+  justify-content: center;
+  align-content: center;
+}
