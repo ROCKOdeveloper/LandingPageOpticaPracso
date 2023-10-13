@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 export const Home = () => {
   return (
     <>
@@ -597,8 +596,12 @@ export const Home = () => {
           <div className="flex flex-col h-full justify-center items-center my-5 md:my-0">
             <p className="text-xl font-bold">lorem</p>
             <ul className="text-white/80">
-              <li className="hover:py-1 duration-500 hover:text-white/90">lorem ipsum</li>
-              <li className="hover:py-1 duration-500 hover:text-white/90">lorem ipsum</li>
+              <li className="hover:py-1 duration-500 hover:text-white/90">
+                lorem ipsum
+              </li>
+              <li className="hover:py-1 duration-500 hover:text-white/90">
+                lorem ipsum
+              </li>
             </ul>
           </div>
           <div className="flex flex-col justify-center items-center">
@@ -613,7 +616,10 @@ export const Home = () => {
                   rel="noopener noreferrer"
                   className="w-10 hover:scale-125 duration-300 delay-75 hover:drop-shadow-2xl"
                 >
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="facebook" />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg"
+                    alt="facebook"
+                  />
                 </a>
                 <a
                   href="http://www.instagram.com/opticaspracso"
@@ -621,13 +627,30 @@ export const Home = () => {
                   rel="noopener noreferrer"
                   className="w-10 ml-7 duration-300 delay-75 hover:scale-125 hover:drop-shadow-2xl"
                 >
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="instagram" />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                    alt="instagram"
+                  />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <Link
+        to="https://web.whatsapp.com/send?phone=573022910878&text=Hola%20Optica%20Pracso"
+        target="_blank"
+        className="fixed bottom-4 right-4 z-50 hover:animate-bounce drop-shadow-3xl"
+      >
+        <img
+          className="w-10 h-10"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="whatsapp"
+        />
+        <span className="absolute top-0 right-0 inline-flex rounded-full h-3 w-3 bg-red-500">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400"></span>
+        </span>
+      </Link>
     </>
   );
 };
