@@ -1,7 +1,9 @@
 import Photo from "../assets/img/agenda.jpg";
+import { NavBarEmpy } from "../components/NavbarEmpy";
 export const Appointment = () => {
   return (
     <>
+      <NavBarEmpy />
       <section className="flex flex-col">
         <div className="w-full h-60 relative bg-black">
           <img
@@ -33,7 +35,7 @@ export const Appointment = () => {
           </svg>
         </div>
       </section>
-      <section>
+      <section className="my-10">
         <span className="text-3xl font-bold mx-auto flex mb-5 py-2 w-fit text-center">
           Agendate con nosotros
         </span>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Back } from "../components/Back";
 export const NotFound = () => {
   return (
     <>
@@ -17,17 +17,7 @@ export const NotFound = () => {
             Página no encontrada. Te invitamos a regresar a la página principal.
           </p>
           <div className="flex justify-center">
-            <span
-              className="text-xl font-bold flex px-3 py-2 w-fit rounded-2xl hover:scale-110 duration-300"
-              style={{
-                color: "#fff",
-                backgroundColor: "#093D90",
-                borderColor: "#009865",
-                borderWidth: "4px",
-              }}
-            >
-              <Link to="/">Regresar</Link>
-            </span>
+            <Back />
           </div>
         </div>
         <div>

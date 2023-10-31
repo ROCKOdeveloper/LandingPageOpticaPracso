@@ -35,6 +35,7 @@ export const Services = () => {
         </div>
       </section>
       <section className="mb-10 mt-5 px-5 md:px-20 text-center md:text-left">
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 hover:my-10 duration-300">
           <div className="flex flex-col justify-center my-5">
             <span className="text-2xl font-bold mb-3">
@@ -56,6 +57,7 @@ export const Services = () => {
             />
           </div>
         </div>
+        
         <hr />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 hover:my-10 duration-300">
           <div className="flex flex-col justify-center my-5">

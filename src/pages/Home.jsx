@@ -1,21 +1,26 @@
+import { NavBar } from "../components/NavBar";
 import { Link } from "react-router-dom";
 export const Home = () => {
+
+  
+  
   return (
     <>
-      <section className="flex h-screen bg-black relative text-white">
+      <NavBar />
+      <section className="flex h-screen bg-black relative text-white" id="hero">
         <video autoPlay loop muted className="w-full h-full object-cover">
           <source src="./src/assets/video/pracsodemo6.mp4" type="video/mp4" />
         </video>
         <div className="text-center absolute w-11/12 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-3xl">
-          <h1 className="text-inherit text-5xl font-semibold">
+          <h1 className="text-white text-4xl md:text-6xl font-semibold italic">
             Expertos en salud visual
           </h1>
-          <p className="mt-4 text-xl">
+          <p className="text-white text-base font-light mt-3 mb-3.5">
             Agenda tu cita con nosotros hoy mismo para recibir un servicio de
             calidad excepcional.
           </p>
           <Link to="/appointment">
-            <button className="mt-8 text-inherit text-xl font-bold py-2 px-4 rounded-xl border border-white hover:scale-110 duration-300">
+            <button className="text-white text-xl font-semibold px-3 py-2 rounded-2xl border-2 hover:scale-105 duration-500 ease-in-out">
               Agenda ahora
             </button>
           </Link>
@@ -43,18 +48,34 @@ export const Home = () => {
           ></path>
         </svg>
       </section>
-      <section className="flex flex-col bg-white">
-        <div className="w-full pt-10 md:pt-20 pb-5 px-4 md:px-40 text-center md:text-left">
+      <section className="flex flex-col bg-white" id="about">
+        <div className="w-full pt-10 px-10 md:pt-20 md:px-20  text-center md:text-left">
           <h2 className="text-3xl font-bold">Quienes somos</h2>
-          <p className="mt-2 text-black/70">
+          <p className="mt-2 text-black/60">
             Ópticas PRACSO, una empresa familiar desde 2010, se destaca como
             líder en salud visual en la costa Atlántica, siendo la mejor opción
             para resolver problemas visuales.
           </p>
         </div>
-        <div className="w-full flex flex-col mt-5 pb-14 md:flex-row justify-evenly items-center">
-          <Link to={"/about"}>
-            <div className="bg-white w-40 h-40 border-4 hover:border-green-600 border-transparent flex justify-center items-center p-4 rounded-lg text-center drop-shadow-xl hover:drop-shadow-2xl duration-300 ease-in-out hover:scale-110 mb-9 md:mb-0">
+        <div className="w-full flex flex-row flex-wrap px-10 pb-10 md:px-20 md:pb-20 justify-center md:justify-between items-center">
+          <Link to={"/about"} onClick={() => window.scrollTo(0, 0)}>
+            <div className="bg-white w-40 h-40 border-4 hover:border-green-600 border-transparent flex justify-center items-center p-4 rounded-lg text-center drop-shadow-xl hover:drop-shadow-2xl duration-300 ease-in-out hover:scale-110 m-5 md:m-10">
+              <div className="flex flex-col">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="80"
+                  width="80"
+                  viewBox="0 -960 960 960"
+                  fill="#009865"
+                >
+                  <path d="M480-94.384q-70.539-58.923-156.769-92.923Q237-221.307 144-227.461v-383.001q97.615 5.385 183.231 46.346Q412.846-523.154 480-463.308q67.154-59.846 152.769-100.808Q718.385-605.077 816-610.462v383.001q-93 6.154-179.231 40.154-86.23 34-156.769 92.923Zm-.06-55.77q66.795-48.762 140.124-78.055 73.329-29.293 152.167-38.74v-294.282q-76.692 12.539-151.269 52.308Q546.385-469.154 480-404.461q-67.539-66.385-141.039-105.808-73.5-39.423-151.192-50.962v294.693q78.838 9.036 152.108 38.329 73.269 29.293 140.063 78.055Zm1.522-465.615q-57.771 0-97.54-39.384-39.768-39.385-39.768-97.539 0-58.155 39.768-97.924 39.769-39.769 97.54-39.769 57.77 0 97.539 39.769 39.768 39.769 39.768 97.924 0 58.154-39.768 97.539-39.769 39.384-97.539 39.384Zm.254-43.77q38.515 0 65.899-27.639Q575-714.817 575-753.332q0-38.514-27.639-65.899-27.639-27.384-66.154-27.384t-65.899 27.639q-27.385 27.639-27.385 66.154 0 38.514 27.639 65.899 27.64 27.384 66.154 27.384Zm-.254-93.538ZM480-404.461Z" />
+                </svg>
+                <span className="mt-3 font-semibold text-xl">História</span>
+              </div>
+            </div>
+          </Link>
+          <Link to={"/about"} onClick={() => window.scrollTo(0, 0)}>
+            <div className="bg-white w-40 h-40 border-4 hover:border-green-600 border-transparent flex justify-center items-center p-4 rounded-lg text-center drop-shadow-xl hover:drop-shadow-2xl duration-300 ease-in-out hover:scale-110 m-5 md:m-10">
               <div className="flex flex-col">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +90,8 @@ export const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/about"}>
-            <div className="bg-white w-40 h-40 border-4 hover:border-green-600 border-transparent flex justify-center items-center p-4 rounded-lg text-center drop-shadow-xl hover:drop-shadow-2xl duration-300 ease-in-out hover:scale-110 mb-9 md:mb-0">
+          <Link to={"/about"} onClick={() => window.scrollTo(0, 0)}>
+            <div className="bg-white w-40 h-40 border-4 hover:border-green-600 border-transparent flex justify-center items-center p-4 rounded-lg text-center drop-shadow-xl hover:drop-shadow-2xl duration-300 ease-in-out hover:scale-110 m-5 md:m-10">
               <div className="flex flex-col">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +106,8 @@ export const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/about"}>
-            <div className="bg-white w-40 h-40 border-4 hover:border-green-600 border-transparent flex justify-center items-center p-4 rounded-lg text-center drop-shadow-xl hover:drop-shadow-2xl duration-300 ease-in-out hover:scale-110">
+          <Link to={"/about"} onClick={() => window.scrollTo(0, 0)}>
+            <div className="bg-white w-40 h-40 border-4 hover:border-green-600 border-transparent flex justify-center items-center p-4 rounded-lg text-center drop-shadow-xl hover:drop-shadow-2xl duration-300 ease-in-out hover:scale-110 m-5 md:m-10">
               <div className="flex flex-col">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -115,6 +136,7 @@ export const Home = () => {
       </svg>
       <section
         className="flex flex-col text-white"
+        id="services"
         style={{ backgroundColor: "#093D90" }}
       >
         <div className="w-full pt-10 md:pt-20 pb-5 px-4 md:px-40 text-center md:text-left">
@@ -125,18 +147,18 @@ export const Home = () => {
             Ópticas Pracso, pone a su disposición los siguientes servicios:
           </p>
         </div>
-        <div className="w-full flex flex-wrap md:flex-row flex-col gap-10 mt-5 pb-10 px-4 justify-center">
-          <Link to={"/Services"}>
-            <div className="w-auto md:w-80 rounded-2xl relative text-black bg-white">
-              <div className="relative rounded-t-2xl overflow-hidden bg-cover bg-no-repeat">
+        <div className="w-full flex flex-wrap md:flex-row flex-col gap-5 mt-5 pb-10 px-4 justify-center">
+          <Link to={"/Services"} className="group" onClick={() => window.scrollTo(0, 0)}>
+            <div className="w-auto md:w-80 rounded-2xl relative bg-white">
+              <div className="relative rounded-2xl overflow-hidden bg-cover bg-no-repeat">
                 <img
                   src="./src/assets/img/general.jpg"
                   alt="services"
-                  className="w-full rounded-t-2xl transition duration-500 ease-out hover:scale-125 hover:translate-x-9"
+                  className="w-full rounded-t-2xl transition duration-500 ease-out group-hover:scale-125 group-hover:translate-x-9"
                 />
               </div>
               <svg
-                className="absolute w-full -translate-y-full z-10"
+                className="absolute w-full -translate-y-full rounded-b-2xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1440 320"
               >
@@ -145,40 +167,27 @@ export const Home = () => {
                   d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                 ></path>
               </svg>
-              <div className="-mt-9 z-20 relative">
+              <div className="-translate-y-full z-20 absolute w-full pb-4 group-hover:scale-110 duration-300">
                 <span
-                  className="flex z-20 mx-auto md:ml-5 text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
+                  className="flex z-20 mx-auto text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
                   style={{ backgroundColor: "#009865" }}
                 >
                   Optometria General
                 </span>
-                <p className="mt-1 px-5 text-black/70">
-                  El equipo de profesionales en salud visual, especializado en
-                  optometría, aborda patologías oculares desde un enfoque
-                  multidisciplinario.
-                </p>
-                <div className="flex justify-end w-full">
-                  <button
-                    style={{ color: "#009865" }}
-                    className="flex pr-4 pb-3 font-semibold hover:underline underline-offset-2 decoration-green-600"
-                  >
-                    Saber más...
-                  </button>
-                </div>
               </div>
             </div>
           </Link>
-          <Link to={"/Services"}>
+          <Link to={"/Services"} className="group" onClick={() => window.scrollTo(0, 0)}>
             <div className="w-auto md:w-80 rounded-2xl relative text-black bg-white">
-              <div className="relative rounded-t-2xl overflow-hidden bg-cover bg-no-repeat">
+              <div className="relative rounded-2xl overflow-hidden bg-cover bg-no-repeat">
                 <img
                   src="./src/assets/img/pediatrica.jpg"
                   alt="services"
-                  className="w-full rounded-t-2xl transition duration-500 ease-out hover:scale-125 hover:translate-x-9"
+                  className="w-full rounded-2xl transition duration-500 ease-out group-hover:scale-125 group-hover:translate-x-9"
                 />
               </div>
               <svg
-                className="absolute w-full -translate-y-full z-10"
+                className="absolute w-full -translate-y-full z-10 rounded-b-2xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1440 320"
               >
@@ -187,39 +196,27 @@ export const Home = () => {
                   d="M0,320L34.3,309.3C68.6,299,137,277,206,261.3C274.3,245,343,235,411,224C480,213,549,203,617,186.7C685.7,171,754,149,823,128C891.4,107,960,85,1029,106.7C1097.1,128,1166,192,1234,218.7C1302.9,245,1371,235,1406,229.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                 ></path>
               </svg>
-              <div className="-mt-9 z-20 relative">
+              <div className="-translate-y-full z-20 absolute w-full pb-4 group-hover:scale-110 duration-300">
                 <span
-                  className="flex z-20 mx-auto md:ml-5 text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
+                  className="flex z-20 mx-auto text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
                   style={{ backgroundColor: "#009865" }}
                 >
                   Optometria Pediátrica
                 </span>
-                <p className="mt-1 px-5 text-black/70">
-                  Evaluar los ojos de los niños es esencial, ya que están en
-                  crecimiento y cualquier problema puede ser tratado a tiempo.
-                </p>
-                <div className="flex justify-end w-full">
-                  <button
-                    style={{ color: "#009865" }}
-                    className="flex pr-4 pb-3 font-semibold hover:underline underline-offset-2 decoration-green-600"
-                  >
-                    Saber más...
-                  </button>
-                </div>
               </div>
             </div>
           </Link>
-          <Link to={"/Services"}>
+          <Link to={"/Services"} className="group" onClick={() => window.scrollTo(0, 0)}>
             <div className="w-auto md:w-80 rounded-2xl relative text-black bg-white">
-              <div className="relative rounded-t-2xl overflow-hidden bg-cover bg-no-repeat">
+              <div className="relative rounded-2xl overflow-hidden bg-cover bg-no-repeat">
                 <img
                   src="./src/assets/img/ortoptica.jpg"
                   alt="services"
-                  className="w-full rounded-t-2xl transition duration-500 ease-out hover:scale-125 hover:translate-x-9"
+                  className="w-full rounded-2xl transition duration-500 ease-out group-hover:scale-125 group-hover:translate-x-9"
                 />
               </div>
               <svg
-                className="absolute w-full -translate-y-full z-10"
+                className="absolute w-full -translate-y-full z-10 rounded-b-2xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1440 320"
               >
@@ -228,40 +225,27 @@ export const Home = () => {
                   d="M0,224L34.3,234.7C68.6,245,137,267,206,256C274.3,245,343,203,411,202.7C480,203,549,245,617,256C685.7,267,754,245,823,234.7C891.4,224,960,224,1029,229.3C1097.1,235,1166,245,1234,229.3C1302.9,213,1371,171,1406,149.3L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                 ></path>
               </svg>
-              <div className="-mt-9 z-20 relative">
+              <div className="-translate-y-full z-20 absolute w-full pb-4 group-hover:scale-110 duration-300">
                 <span
-                  className="flex z-20 mx-auto md:ml-5 text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
+                  className="flex z-20 mx-auto text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
                   style={{ backgroundColor: "#009865" }}
                 >
                   Ortoptica
                 </span>
-                <p className="mt-1 px-5 text-black/70">
-                  Es una especialidad de la optometría dedicada a la
-                  rehabilitación y tratamiento de enfermedades mediante
-                  ejercicios de entrenamiento visual.
-                </p>
-                <div className="flex justify-end w-full">
-                  <button
-                    style={{ color: "#009865" }}
-                    className="flex pr-4 pb-3 font-semibold hover:underline underline-offset-2 decoration-green-600"
-                  >
-                    Saber más...
-                  </button>
-                </div>
               </div>
             </div>
           </Link>
-          <Link to={"/Services"}>
+          <Link to={"/Services"} className="group" onClick={() => window.scrollTo(0, 0)}>
             <div className="w-auto md:w-80 rounded-2xl relative text-black bg-white">
-              <div className="relative rounded-t-2xl overflow-hidden bg-cover bg-no-repeat">
+              <div className="relative rounded-2xl overflow-hidden bg-cover bg-no-repeat">
                 <img
                   src="./src/assets/img/contactologia.jpg"
                   alt="services"
-                  className="w-full rounded-t-2xl transition duration-500 ease-out hover:scale-125 hover:translate-x-9"
+                  className="w-full rounded-2xl transition duration-500 ease-out group-hover:scale-125 group-hover:translate-x-9"
                 />
               </div>
               <svg
-                className="absolute w-full -translate-y-full z-10"
+                className="absolute w-full -translate-y-full z-10 rounded-b-2xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1440 320"
               >
@@ -270,40 +254,27 @@ export const Home = () => {
                   d="M0,32L34.3,53.3C68.6,75,137,117,206,149.3C274.3,181,343,203,411,181.3C480,160,549,96,617,80C685.7,64,754,96,823,133.3C891.4,171,960,213,1029,229.3C1097.1,245,1166,235,1234,202.7C1302.9,171,1371,117,1406,90.7L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                 ></path>
               </svg>
-              <div className="-mt-9 z-20 relative">
+              <div className="-translate-y-full z-20 absolute w-full pb-4 group-hover:scale-110 duration-300">
                 <span
-                  className="flex z-20 mx-auto md:ml-5 text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
+                  className="flex z-20 mx-auto text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
                   style={{ backgroundColor: "#009865" }}
                 >
                   Contactologia
                 </span>
-                <p className="mt-1 px-5 text-black/70">
-                  La contactología en Ópticas Pracso ofrece lentes de contacto
-                  adaptadas a las necesidades individuales, tanto estéticas como
-                  correctivas.
-                </p>
-                <div className="flex justify-end w-full">
-                  <button
-                    style={{ color: "#009865" }}
-                    className="flex pr-4 pb-3 font-semibold hover:underline underline-offset-2 decoration-green-600"
-                  >
-                    Saber más...
-                  </button>
-                </div>
               </div>
             </div>
           </Link>
-          <Link to={"/Services"}>
+          <Link to={"/Services"} className="group" onClick={() => window.scrollTo(0, 0)}>
             <div className="w-auto md:w-80 rounded-2xl relative text-black bg-white">
-              <div className="relative rounded-t-2xl overflow-hidden bg-cover bg-no-repeat">
+              <div className="relative rounded-2xl overflow-hidden bg-cover bg-no-repeat">
                 <img
                   src="./src/assets/img/brigadas.jpg"
                   alt="services"
-                  className="w-full rounded-t-2xl transition duration-500 ease-out hover:scale-125 hover:translate-x-9"
+                  className="w-full rounded-2xl transition duration-500 ease-out group-hover:scale-125 group-hover:translate-x-9"
                 />
               </div>
               <svg
-                className="absolute w-full -translate-y-full z-10"
+                className="absolute w-full -translate-y-full z-10 rounded-b-2xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1440 320"
               >
@@ -312,40 +283,27 @@ export const Home = () => {
                   d="M0,256L34.3,229.3C68.6,203,137,149,206,154.7C274.3,160,343,224,411,245.3C480,267,549,245,617,240C685.7,235,754,245,823,224C891.4,203,960,149,1029,138.7C1097.1,128,1166,160,1234,160C1302.9,160,1371,128,1406,112L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                 ></path>
               </svg>
-              <div className="-mt-9 z-20 relative">
+              <div className="-translate-y-full z-20 absolute w-full pb-4 group-hover:scale-110 duration-300">
                 <span
-                  className="flex z-20 mx-auto md:ml-5 text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
+                  className="flex z-20 mx-auto text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
                   style={{ backgroundColor: "#009865" }}
                 >
                   Brigadas
                 </span>
-                <p className="mt-1 px-5 text-black/70">
-                  Para cumplir con la normativa que rige a las empresas
-                  colombianas, llevamos a cabo jornadas de salud visual
-                  preventiva.
-                </p>
-                <div className="flex justify-end w-full">
-                  <button
-                    style={{ color: "#009865" }}
-                    className="flex pr-4 pb-3 font-semibold hover:underline underline-offset-2 decoration-green-600"
-                  >
-                    Saber más...
-                  </button>
-                </div>
               </div>
             </div>
           </Link>
-          <Link to={"/Services"}>
+          <Link to={"/Services"} className="group" onClick={() => window.scrollTo(0, 0)}>
             <div className="w-auto md:w-80 rounded-2xl relative text-black bg-white">
-              <div className="relative rounded-t-2xl overflow-hidden bg-cover bg-no-repeat">
+              <div className="relative rounded-2xl overflow-hidden bg-cover bg-no-repeat">
                 <img
                   src="./src/assets/img/productos.jpg"
                   alt="services"
-                  className="w-full rounded-t-2xl transition duration-500 ease-out hover:scale-125 hover:translate-x-9"
+                  className="w-full rounded-2xl transition duration-500 ease-out group-hover:scale-125 group-hover:translate-x-9"
                 />
               </div>
               <svg
-                className="absolute w-full -translate-y-full z-10"
+                className="absolute w-full -translate-y-full z-10 rounded-b-2xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1440 320"
               >
@@ -354,26 +312,13 @@ export const Home = () => {
                   d="M0,128L34.3,138.7C68.6,149,137,171,206,192C274.3,213,343,235,411,240C480,245,549,235,617,202.7C685.7,171,754,117,823,101.3C891.4,85,960,107,1029,133.3C1097.1,160,1166,192,1234,192C1302.9,192,1371,160,1406,144L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                 ></path>
               </svg>
-              <div className="-mt-9 z-20 relative">
+              <div className="-translate-y-full z-20 absolute w-full pb-4 group-hover:scale-110 duration-300">
                 <span
-                  className="flex z-20 text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg mx-auto md:ml-5 md:text-center"
+                  className="flex z-20 mx-auto text-2xl font-semibold text-white w-fit px-3 py-1 rounded-lg"
                   style={{ backgroundColor: "#009865" }}
                 >
                   Nuestros Productos
                 </span>
-                <p className="mt-1 px-5 text-black/70">
-                  En nuestras ópticas, ofrecemos una variedad de lentes,
-                  tratamientos antirreflejantes y de protección UV, así como
-                  diversos materiales.
-                </p>
-                <div className="flex justify-end w-full">
-                  <button
-                    style={{ color: "#009865" }}
-                    className="flex pr-4 pb-3 font-semibold hover:underline underline-offset-2 decoration-green-600"
-                  >
-                    Saber más...
-                  </button>
-                </div>
               </div>
             </div>
           </Link>
@@ -594,13 +539,13 @@ export const Home = () => {
             />
           </div>
           <div className="flex flex-col h-full justify-center items-center my-5 md:my-0">
-            <p className="text-xl font-bold">lorem</p>
-            <ul className="text-white/80">
-              <li className="hover:py-1 duration-500 hover:text-white/90">
-                lorem ipsum
+            <p className="text-xl font-bold mb-2">Más de Pracso</p>
+            <ul className="text-white/80 text-center">
+              <li className="hover:py-1 duration-500 hover:text-white/90 hover:scale-110">
+                <Link to={"/FAQ"} onClick={() => window.scrollTo(0, 0)}>Preguntas frecuentes</Link>
               </li>
-              <li className="hover:py-1 duration-500 hover:text-white/90">
-                lorem ipsum
+              <li className="hover:py-1 duration-500 hover:text-white/90 hover:scale-110">
+                <Link to={"/Ubications"} onClick={() => window.scrollTo(0, 0)}>Nuestras sedes</Link>
               </li>
             </ul>
           </div>
@@ -640,10 +585,10 @@ export const Home = () => {
       <Link
         to="https://web.whatsapp.com/send?phone=573022910878&text=Hola%20Optica%20Pracso"
         target="_blank"
-        className="fixed bottom-4 right-4 z-50 hover:animate-bounce drop-shadow-3xl"
+        className="fixed bottom-4 right-4 z-50 animate-bounce"
       >
         <img
-          className="w-10 h-10"
+          className="w-10 h-10 hover:scale-110 duration-200"
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
           alt="whatsapp"
         />
